@@ -1,0 +1,14 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: AIGOU_ZUUL
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:7001/eureka  #指向注册中心地址
+zuul:
+  routes:
+    aigou_plat: /login/** #以/login开头的所有路径都转发给user-provider进行处理
+  ignored-services: "*" #忽略掉服务名访问方式 使用上面/login的方式来访问
+  prefix: /aigou #添加 前缀访问  localhost:9527/login/user/provider/user/2

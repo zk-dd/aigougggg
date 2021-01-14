@@ -1,0 +1,13 @@
+server:
+  port: 7001 #端口
+eureka:
+  instance:
+    hostname: zk #主机名
+  client:
+    register-with-eureka: false #禁止当前注册中心注册自己
+    fetch-registry: false #禁止当前注册中心拉去注册服务订单
+    serviceUrl:
+      defaultZone: http://127.0.0.1:7001/eureka/
+spring:
+  application:
+    name: AIGOU_EUREKA

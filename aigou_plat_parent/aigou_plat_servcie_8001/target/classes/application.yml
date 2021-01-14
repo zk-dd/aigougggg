@@ -1,0 +1,11 @@
+eureka:
+  client:
+    serviceurl:
+      defaultZone: http://127.0.0.1:7001/eureka/  #指向注册中心地址
+  instance:
+    prefer-ip-address: true # 显示Ip
+server:
+  port: 8001
+spring:
+  application:
+    name: AIGOU_PLAT  #该客户端名字
